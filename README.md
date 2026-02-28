@@ -48,6 +48,7 @@
 `Category`(name: str, description: str, products: list)
 
 ### Особенности реализации
+
 **Счётчики объектов:**
 
 * `Product.product_count` увеличивается при создании каждого товара;
