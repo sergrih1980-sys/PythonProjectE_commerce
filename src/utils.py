@@ -22,10 +22,11 @@ if __name__ == "__main__":
     category = Category(
         name="",
         description="",
-        products=[]
-        numbers_categories=0
+        products=[])
 
-    )
+    numbers_categories=0
+    numbers_products=0
+
     print(category.name)
     print(category.description)
     print(category.products)
