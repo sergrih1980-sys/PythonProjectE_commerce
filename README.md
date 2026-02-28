@@ -44,7 +44,7 @@
 
 **Инициализация:**
 
-```python```
+ ```python```
 `Category`(name: str, description: str, products: list)
 
 ### Особенности реализации
