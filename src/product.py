@@ -13,4 +13,3 @@ class Product:
         self.quantity = quantity
         self.description = description
         Product.product_count += 1
-
