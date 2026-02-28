@@ -32,3 +32,21 @@ def sample_category():
         description="Современные телевизоры с высоким разрешением",
         products=[product1, product2]
     )
+
+@pytest.fixture
+def multiple_categories():
+    from src.utils import Category
+    from src.product import Product
+
+    cat1 = Category(
+        "Телевизоры",
+        "Категория 1",
+        [Product("TV1", 50000.0, 2, "Desc1")]
+    )
+    cat2 = Category(
+        "Смартфоны",
+        "Категория 2",
+        [Product("Phone1", 70000.0, 5, "Desc2")]
+    )
+
+    return [cat1, cat2]
