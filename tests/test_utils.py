@@ -1,5 +1,6 @@
 from src.product import Product
-from  src.utils import Category
+from src.utils import Category
+
 
 def test_category_init(sample_category):
     assert sample_category.name == "Телевизоры"
