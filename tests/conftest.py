@@ -1,6 +1,6 @@
 import pytest
-from src.product import Product
 from src.utils import Category
+from src.product import Product
 
 
 @pytest.fixture
@@ -19,17 +19,16 @@ def sample_product():
         price=123000.0,
         quantity=7,
         description="Фоновая подсветка"
+
     )
 
 @pytest.fixture
 def sample_category():
-    return Category(
-        name="Смартфоны",
-        description="Смартфоны, как средство не только коммуникации, но и получения дополнительных функций для удобства жизни",
-        product3=Product(
-            name="Xiaomi Redmi Note 11",
-            price=31000.0,
-            quantity=14,
-            description="1024GB, Синий"
+    product1 = Product("Телевизор 4K", 50000.0, 3, "4K, HDR")
+    product2 = Product("Телевизор 8K", 120000.0, 1, "8K, OLED")
 
-        ))
+    return Category(
+        name="Телевизоры",
+        description="Современные телевизоры с высоким разрешением",
+        products=[product1, product2]
+    )
