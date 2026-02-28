@@ -35,9 +35,6 @@ def sample_category():
 
 @pytest.fixture
 def multiple_categories():
-    from src.utils import Category
-    from src.product import Product
-
     cat1 = Category(
         "Телевизоры",
         "Категория 1",
