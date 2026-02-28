@@ -14,6 +14,7 @@ class Produkt:
 
 if __name__ == "__main__":
     produkt = Produkt("", "10", 10, "Produkt")
+
     print(produkt.name)
     print(produkt.description)
     print(produkt.price)
