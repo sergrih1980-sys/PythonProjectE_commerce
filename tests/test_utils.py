@@ -1,4 +1,4 @@
-from src.product import Product
+
 from src.utils import Category
 
 
@@ -16,4 +16,4 @@ def test_category_counter(sample_category):
 
 def test_produkt_counter(sample_product):
     # Проверяем счётчик продуктов
-    assert Product.product_count >= 1
+    assert Category.product_count >= 1
