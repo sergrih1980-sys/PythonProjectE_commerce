@@ -6,10 +6,8 @@ class Product:
     price: float
     quantity: int
 
-
     def __init__(self, name, price, quantity, description):
         self.name = name
         self.price = price
         self.quantity = quantity
         self.description = description
-
