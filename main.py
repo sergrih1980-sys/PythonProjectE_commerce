@@ -10,10 +10,10 @@ if __name__ == "__main__":
         "256GB, Серый цвет, 200MP камера"
     )
     product2 = Product(
-        "Iphone 15",
+        "iPhone 15",
         210000.0,
         8,
-        "512GB, Gray space"
+        "512GB, Gray Space"
     )
     product3 = Product(
         "Xiaomi Redmi Note 11",
@@ -27,16 +27,19 @@ if __name__ == "__main__":
     print(product1.description)
     print(product1.price)
     print(product1.quantity)
+    print()
 
     print(product2.name)
     print(product2.description)
     print(product2.price)
     print(product2.quantity)
+    print()
 
     print(product3.name)
     print(product3.description)
     print(product3.price)
     print(product3.quantity)
+    print()
 
     # Создаём категорию с продуктами
     category1 = Category(
@@ -49,8 +52,9 @@ if __name__ == "__main__":
     print(category1.name == "Смартфоны")
     print(category1.description)
     print(len(category1.products))
-    print(category1.category_count)  # Статический счётчик категорий
+    print(Category.category_count)  # Статический счётчик категорий
     print(category1.product_count)  # Количество продуктов в этой категории
+    print()
 
     # Создаём второй продукт и категорию
     product4 = Product(
@@ -69,8 +73,37 @@ if __name__ == "__main__":
     print(category2.name)
     print(category2.description)
     print(len(category2.products))
-    print(category2.products)
+    for product_info in category2.products:
+        print(product_info)
+    print()
 
     # Выводим общие счётчики
     print("Всего категорий:", Category.category_count)
-    print("Всего продуктов:", Product.product_count)
+    print("Всего продуктов:", Category.product_count)
+    print()
+
+    # Демонстрация добавления продукта
+    print("Продукты в категории 'Смартфоны' до добавления:")
+    for product_info in category1.products:
+        print(f"  - {product_info}")
+
+    category1.add_product(product4)
+    print("\nПродукты в категории 'Смартфоны' после добавления:")
+    for product_info in category1.products:
+        print(f"  - {product_info}")
+    print("Количество продуктов в категории:", category1.product_count)
+    print()
+
+    # Тестирование фабричного метода
+    new_product = Product.new_product(
+        "Samsung Galaxy S24",
+        190000.0,
+        3,
+        "512GB, Чёрный, 200MP камера"
+    )
+    print("Новый продукт через фабричный метод:")
+    print(f"Название: {new_product.name}")
+    print(f"Описание: {new_product.description}")
+    print(f"Цена: {new_product.price}")
+    print(f"Остаток: {new_product.quantity}")
+    print()

@@ -44,10 +44,11 @@
 
 **Инициализация:**
 
-```python```
+ ```python```
 `Category`(name: str, description: str, products: list)
 
 ### Особенности реализации
+
 **Счётчики объектов:**
 
 * `Product.product_count` увеличивается при создании каждого товара;
@@ -59,6 +60,7 @@
 Дублирование счётчика товаров в классе `Category` может вызвать расхождение данных, если товары создаются вне категорий.
 
 ### Пример использования
+
 ```python```
 # Создаём товары
 `tv = Product("55\" QLED 4K", 123000.0, 7, "Фоновая подсветка")`
@@ -72,6 +74,6 @@
 )
 
 # Проверяем счётчики
-print(f"Всего товаров: {Product.product_count}")      # Вывод: 2
-print(f"Всего категорий: {Category.category_count}")   # Вывод: 1
-print(f"Счётчик в категории: {Category.product_count}") # Вывод: 1
+print(f"Всего товаров: {Product.product_count}")         # Вывод: 2
+print(f"Всего категорий: {Category.category_count}")     # Вывод: 1
+print(f"Счётчик в категории: {Category.product_count}")  # Вывод: 1
