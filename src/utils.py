@@ -1,4 +1,3 @@
-from src.product import Product
 
 
 class Category:
@@ -15,7 +14,6 @@ class Category:
         Category.category_count += 1
         Category.product_count += len(products) if products else 0
 
-
     def add_product(self, product):
         self.__products.append(product)
         Category.product_count += 1
@@ -24,16 +22,6 @@ class Category:
     def products(self):
         result = []
         for product in self.__products:
-           result.append(f"{product.name},{product.price}руб. Остаток: {product.quantity}")
+            result.append(f"{product.name},{product.price}руб. \
+            Остаток: {product.quantity}")
         return result
-
-
-
-
-
-
-
-
-
-
-
