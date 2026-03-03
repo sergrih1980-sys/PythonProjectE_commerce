@@ -36,10 +36,11 @@ class Category:
 
     @property
     def products(self):
-        product_str = []
+        """Возвращает список строк с информацией о продуктах"""
+        result = []
         for product in self.__products:
-            product_str.append(f"{product.name}, {product.price} руб. Остаток: {product.quantity} шт.")
-        return '\n'.join(product_str)  # Объединяем строки с переносом строки между ними
+            result.append(f"{product.name}, {product.price} руб. Остаток: {product.quantity} шт.")
+        return result  # Возвращаем список
 
     @classmethod
     def new_product(cls, name, price, description, quantity):
