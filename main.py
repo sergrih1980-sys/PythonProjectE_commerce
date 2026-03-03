@@ -5,21 +5,21 @@ if __name__ == "__main__":
 
     product1 = Product(
         "Samsung Galaxy S23 Ultra",
-        180000.0,
-        5,
-        "256GB, Серый цвет, 200MP камера"
+        "256GB, Серый цвет, 200MP камера",
+        18000.0,
+        5
     )
     product2 = Product(
         "iPhone 15",
-        210000.0,
-        8,
-        "512GB, Gray Space"
+        "512GB, Gray Space",
+        21000.0,
+        8
     )
     product3 = Product(
         "Xiaomi Redmi Note 11",
-        31000.0,
-        14,
-        "1024GB, Синий"
+        "1024GB, Синий",
+        15000.0,
+        14
     )
 
     # Выводим информацию о продуктах
@@ -47,9 +47,9 @@ if __name__ == "__main__":
     # Создаём второй продукт и категорию
     product4 = Product(
         "55\" QLED 4K",
+        "Фоновая подсветка",
         123000.0,
-        7,
-        "Фоновая подсветка"
+        7
     )
     category2 = Category(
         "Телевизоры",

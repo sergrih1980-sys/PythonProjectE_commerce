@@ -32,7 +32,7 @@ class Product:
         description: str
     ):
         """Создаёт новый экземпляр Product"""
-        product = Product(name, price, quantity, description)
+        product = Product(name, description, price, quantity)
         return product
 
     @price.setter
