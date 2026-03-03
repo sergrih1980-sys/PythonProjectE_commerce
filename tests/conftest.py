@@ -55,65 +55,24 @@ def multiple_categories():
 
 @pytest.fixture
 def valid_product():
-    """Фикстура с продуктом с корректной ценой."""
-    return Product(
-        name="Test Phone",
-        price=180000.0,
-        quantity=5,
-        description="Test description"
-    )
+    """Фикстура для валидного продукта"""
+    return Product("Test Product", 100.0, 10, "Test description")
 
 
 @pytest.fixture
 def product_with_negative_price():
-    """Фикстура с продуктом с отрицательной ценой \
-    (для тестирования валидации)."""
-    return Product(
-        name="Negative Price Product",
-        price=-100.0,
-        quantity=3,
-        description="Product with negative price"
-    )
+    """Фикстура для продукта с отрицательной ценой"""
+    return Product("Invalid Product", -50.0, 5, "Negative price")
 
 
 @pytest.fixture
 def empty_category():
-    """Фикстура: пустая категория без продуктов."""
-    return Category(
-        name="Пустая категория",
-        description="Категория без продуктов",
-        products=[]
-    )
+    """Фикстура для пустой категории"""
+    return Category("Empty Category", "No products", [])
 
 
 @pytest.fixture
-def valid_product():
-    """Фикстура с продуктом с корректной ценой."""
-    return Product(
-        name="Test Phone",
-        price=180000.0,
-        quantity=5,
-        description="Test description"
-    )
-
-
-@pytest.fixture
-def product_with_negative_price():
-    """Фикстура с продуктом с отрицательной ценой \
-    (для тестирования валидации)."""
-    return Product(
-        name="Negative Price Product",
-        price=-100.0,
-        quantity=3,
-        description="Product with negative price"
-    )
-
-
-@pytest.fixture
-def empty_category():
-    """Фикстура: пустая категория без продуктов."""
-    return Category(
-        name="Пустая категория",
-        description="Категория без продуктов",
-        products=[]
-    )
+def category_with_products(valid_product):
+    """Фикстура для категории с продуктами"""
+    products = [valid_product, Product("Another", 150.0, 7, "Another")]
+    return Category("Test Category", "With products", products)
