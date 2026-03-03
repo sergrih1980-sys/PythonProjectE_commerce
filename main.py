@@ -60,7 +60,7 @@ if __name__ == "__main__":
     # Выводим информацию о второй категории
     print(category2.name)
     print(category2.description)
-    print("Количество продуктов в категории:", len(category2.__products))
+    print("Количество продуктов в категории:", category2.get_product_count())
     print(category2.products)
     print()
 

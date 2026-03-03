@@ -18,6 +18,12 @@ class Category:
         # Увеличиваем глобальный счётчик на количество переданных продуктов
         Category.product_count += len(self.__products)
 
+
+    def get_product_count(self):
+        """Возвращает количество продуктов в категории"""
+        return len(self.__products)
+
+
     def add_product(self, product):
         """
         Добавляет продукт в список товаров и увеличивает счётчик продуктов на 1.
