@@ -1,8 +1,5 @@
 
 
-from src.product import Product
-
-
 class Category:
     name: str
     description: str
@@ -41,9 +38,3 @@ class Category:
             result.append(f"{product.name}, {product.price} руб. \
             Остаток: {product.quantity} шт.")
         return result  # Возвращаем список
-
-    @classmethod
-    def new_product(cls, name, price, description, quantity):
-        """Создаёт новый экземпляр Product"""
-        product = Product(name, price, description, quantity)
-        return product

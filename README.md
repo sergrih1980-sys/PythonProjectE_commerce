@@ -12,7 +12,6 @@
 ## Классы и их функциональность
 
 ### Класс `Product`
-
 Представляет отдельный товар в системе.
 
 **Атрибуты:**
@@ -45,6 +44,7 @@
 **Инициализация:**
 
  ```python```
+
 `Category`(name: str, description: str, products: list)
 
 ### Особенности реализации
@@ -74,6 +74,6 @@
 )
 
 # Проверяем счётчики
-print(f"Всего товаров: {Product.product_count}")       # Вывод: 2
-print(f"Всего категорий: {Category.category_count}")    # Вывод: 1
+print(f"Всего товаров: {Product.product_count}")         # Вывод: 2
+print(f"Всего категорий: {Category.category_count}")     # Вывод: 1
 print(f"Счётчик в категории: {Category.product_count}")  # Вывод: 1
