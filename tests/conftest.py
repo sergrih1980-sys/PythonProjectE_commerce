@@ -84,3 +84,36 @@ def empty_category():
         description="Категория без продуктов",
         products=[]
     )
+
+
+@pytest.fixture
+def valid_product():
+    """Фикстура с продуктом с корректной ценой."""
+    return Product(
+        name="Test Phone",
+        price=180000.0,
+        quantity=5,
+        description="Test description"
+    )
+
+
+@pytest.fixture
+def product_with_negative_price():
+    """Фикстура с продуктом с отрицательной ценой \
+    (для тестирования валидации)."""
+    return Product(
+        name="Negative Price Product",
+        price=-100.0,
+        quantity=3,
+        description="Product with negative price"
+    )
+
+
+@pytest.fixture
+def empty_category():
+    """Фикстура: пустая категория без продуктов."""
+    return Category(
+        name="Пустая категория",
+        description="Категория без продуктов",
+        products=[]
+    )
