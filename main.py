@@ -2,24 +2,24 @@ from src.utils import Category
 from src.product import Product
 
 if __name__ == "__main__":
-    # Создаём продукты
+
     product1 = Product(
         "Samsung Galaxy S23 Ultra",
-        "256GB, Серый цвет, 200MP камера",
         180000.0,
-        5
+        5,
+        "256GB, Серый цвет, 200MP камера"
     )
     product2 = Product(
         "iPhone 15",
-        "512GB, Gray Space",
         210000.0,
-        8
+        8,
+        "512GB, Gray Space"
     )
     product3 = Product(
         "Xiaomi Redmi Note 11",
-        "1024GB, Синий",
         31000.0,
-        14
+        14,
+        "1024GB, Синий"
     )
 
     # Выводим информацию о продуктах
@@ -47,9 +47,9 @@ if __name__ == "__main__":
     # Создаём второй продукт и категорию
     product4 = Product(
         "55\" QLED 4K",
-        "Фоновая подсветка",
         123000.0,
-        7
+        7,
+        "Фоновая подсветка"
     )
     category2 = Category(
         "Телевизоры",
@@ -80,17 +80,20 @@ if __name__ == "__main__":
     print()
 
     # Тестирование фабричного метода
-    new_product = Product.new_product(
-        "Samsung Galaxy S24",
-        "512GB, Чёрный, 200MP камера",
-        190000.0,
-        3
-    )
-    print("Новый продукт через фабричный метод:")
-    print(f"Название: {new_product.name}")
-    print(f"Описание: {new_product.description}")
-    print(f"Цена: {new_product.price}")
-    print(f"Остаток: {new_product.quantity}")
+    try:
+        new_product = Product.new_product(
+            "Samsung Galaxy S24",
+            190000.0,
+            3,
+            "512GB, Чёрный, 200MP камера"
+        )
+        print("Новый продукт через фабричный метод:")
+        print(f"Название: {new_product.name}")
+        print(f"Описание: {new_product.description}")
+        print(f"Цена: {new_product.price}")
+        print(f"Остаток: {new_product.quantity}")
+    except ValueError as e:
+        print(f"Ошибка при создании продукта: {e}")
     print()
 
     # Вывод информации о категориях с использованием __str__
