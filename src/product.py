@@ -6,20 +6,37 @@ class Product:
     price: float
     quantity: int
 
-    def __init__(self, name, price, quantity, description):
+    def __init__(
+            self,
+            name: str,
+            description: str,
+            price: float,
+            quantity: int
+    ):
         self.name = name
-        self.__price = None
-        self.price = price
-        self.quantity = quantity
         self.description = description
+        self.__price = price
+        self.quantity = quantity
 
     @property
     def price(self):
         """Геттер для приватного атрибута __price"""
         return self.__price
 
+    @classmethod
+    def new_product(
+        cls,
+        name: str,
+        price: float,
+        quantity: int,
+        description: str
+    ):
+        """Создаёт новый экземпляр Product"""
+        product = Product(name, description, price, quantity)
+        return product
+
     @price.setter
-    def price(self, value):
+    def price(self, value: float):
         """
         Сеттер для атрибута price с проверкой корректности значения.
 
@@ -28,4 +45,4 @@ class Product:
         if value <= 0:
             print("Цена не должна быть нулевая или отрицательная")
         else:
-            self.__price = value
+            self.__price = float(value)
