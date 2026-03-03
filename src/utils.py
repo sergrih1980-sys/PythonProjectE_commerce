@@ -18,15 +18,14 @@ class Category:
         # Увеличиваем глобальный счётчик на количество переданных продуктов
         Category.product_count += len(self.__products)
 
-
     def get_product_count(self):
         """Возвращает количество продуктов в категории"""
         return len(self.__products)
 
-
     def add_product(self, product):
         """
-        Добавляет продукт в список товаров и увеличивает счётчик продуктов на 1.
+        Добавляет продукт в список товаров \
+        и увеличивает  счётчик продуктов на 1.
 
         Параметры:
         product — продукт, который нужно добавить в категорию
@@ -39,7 +38,8 @@ class Category:
         """Возвращает список строк с информацией о продуктах"""
         result = []
         for product in self.__products:
-            result.append(f"{product.name}, {product.price} руб. Остаток: {product.quantity} шт.")
+            result.append(f"{product.name}, {product.price} руб. \
+            Остаток: {product.quantity} шт.")
         return result  # Возвращаем список
 
     @classmethod
@@ -47,4 +47,3 @@ class Category:
         """Создаёт новый экземпляр Product"""
         product = Product(name, price, description, quantity)
         return product
-
