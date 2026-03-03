@@ -6,12 +6,17 @@ class Product:
     price: float
     quantity: int
 
-    def __init__(self, name: str, price: float, quantity: int, description: str):
+    def __init__(
+            self,
+            name: str,
+            description: str,
+            price: float,
+            quantity: int
+    ):
         self.name = name
         self.description = description
         self.__price = price
         self.quantity = quantity
-
 
     @property
     def price(self):
@@ -19,11 +24,16 @@ class Product:
         return self.__price
 
     @classmethod
-    def new_product(cls, name: str, price: float, quantity: int, description: str ):
+    def new_product(
+        cls,
+        name: str,
+        price: float,
+        quantity: int,
+        description: str
+    ):
         """Создаёт новый экземпляр Product"""
         product = Product(name, price, quantity, description)
         return product
-
 
     @price.setter
     def price(self, value: float):

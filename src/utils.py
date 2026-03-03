@@ -38,4 +38,3 @@ class Category:
             result.append(f"{product.name}, {product.price} руб. \
             Остаток: {product.quantity} шт.")
         return result  # Возвращаем список
-
