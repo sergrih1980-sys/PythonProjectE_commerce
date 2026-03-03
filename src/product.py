@@ -8,15 +8,22 @@ class Product:
 
     def __init__(self, name, price, quantity, description):
         self.name = name
-        self.__price = None
         self.price = price
         self.quantity = quantity
         self.description = description
+
 
     @property
     def price(self):
         """Геттер для приватного атрибута __price"""
         return self.__price
+
+    @classmethod
+    def new_product(cls, name, price, description, quantity):
+        """Создаёт новый экземпляр Product"""
+        product = Product(name, price, description, quantity)
+        return product
+
 
     @price.setter
     def price(self, value):
