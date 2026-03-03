@@ -6,11 +6,11 @@ class Product:
     price: float
     quantity: int
 
-    def __init__(self, name, price, quantity, description):
+    def __init__(self, name: str, price: float, quantity: int, description: str):
         self.name = name
+        self.description = description
         self.price = price
         self.quantity = quantity
-        self.description = description
 
 
     @property
