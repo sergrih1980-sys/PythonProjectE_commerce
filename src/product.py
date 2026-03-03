@@ -19,14 +19,14 @@ class Product:
         return self.__price
 
     @classmethod
-    def new_product(cls, name, price, description, quantity):
+    def new_product(cls, name: str, price: float, quantity: int, description: str ):
         """Создаёт новый экземпляр Product"""
-        product = Product(name, price, description, quantity)
+        product = Product(name, price, quantity, description)
         return product
 
 
     @price.setter
-    def price(self, value):
+    def price(self, value: float):
         """
         Сеттер для атрибута price с проверкой корректности значения.
 
@@ -35,4 +35,4 @@ class Product:
         if value <= 0:
             print("Цена не должна быть нулевая или отрицательная")
         else:
-            self.__price = value
+            self.__price = float(value)
