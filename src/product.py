@@ -9,7 +9,7 @@ class Product:
     def __init__(self, name: str, price: float, quantity: int, description: str):
         self.name = name
         self.description = description
-        self.price = price
+        self.__price = price
         self.quantity = quantity
 
 
