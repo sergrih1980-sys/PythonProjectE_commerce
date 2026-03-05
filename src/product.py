@@ -31,7 +31,7 @@ class Product:
         quantity: int,
         description: str
     ):
-        """Создаёт новый экземпляр Product"""
+        """ Создаёт новый экземпляр Product """
         product = Product(name, description, price, quantity)
         return product
 

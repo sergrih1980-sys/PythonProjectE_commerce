@@ -64,7 +64,7 @@ if __name__ == "__main__":
     print(category2.products)
     print()
 
-    # Выводим общие счётчики
+    #  Выводим общие счётчики
     print("Всего категорий:", Category.category_count)
     print("Всего продуктов:", Category.product_count)
     print()
