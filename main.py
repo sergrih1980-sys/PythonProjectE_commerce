@@ -81,12 +81,12 @@ if __name__ == "__main__":
 
     # Тестирование фабричного метода
     try:
-        new_product = Product.new_product(
-            "Samsung Galaxy S24",
-            190000.0,
-            3,
-            "512GB, Чёрный, 200MP камера"
-        )
+        new_product = Product.new_product({
+            'name': 'Samsung Galaxy S24',
+            'price': 190000.0,
+            'quantity': 3,
+            'description': '512GB, Чёрный, 200MP камера'
+        })
         print("Новый продукт через фабричный метод:")
         print(f"Название: {new_product.name}")
         print(f"Описание: {new_product.description}")
