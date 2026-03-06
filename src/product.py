@@ -24,15 +24,9 @@ class Product:
         return self.__price
 
     @classmethod
-    def new_product(
-        cls,
-        name: str,
-        price: float,
-        quantity: int,
-        description: str
-    ):
-        """ Создаёт новый экземпляр Product """
-        product = Product(name, description, price, quantity)
+    def new_product(cls, product_data: dict):
+        """ Создаёт новый экземпляр Product из словаря с данными """
+        product = cls(**product_data)
         return product
 
     @price.setter
