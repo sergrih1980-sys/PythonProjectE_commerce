@@ -15,6 +15,9 @@ class Category:
         # Увеличиваем глобальный счётчик на количество переданных продуктов
         Category.product_count += len(self.__products)
 
+    def __str__(self):
+        return f"{self.name}, {len(self.__products)} шт"
+
     def get_product_count(self):
         """Возвращает количество продуктов в категории"""
         return len(self.__products)

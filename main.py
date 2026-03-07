@@ -101,3 +101,4 @@ if __name__ == "__main__":
     print(category1)
     print("\nИнформация о категории 'Телевизоры':")
     print(category2)
+
