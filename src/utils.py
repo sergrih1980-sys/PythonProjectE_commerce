@@ -16,7 +16,7 @@ class Category:
         Category.product_count += len(self.__products)
 
     def __str__(self):
-        return f"{self.name}, {len(self.__products)} шт"
+        return f"{self.name}, количество продуктов {len(self.__products)} шт"
 
     def get_product_count(self):
         """Возвращает количество продуктов в категории"""
