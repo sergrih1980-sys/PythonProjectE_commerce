@@ -83,15 +83,18 @@ def product_a():
     """Фикстура для товара A: цена 100 руб., количество 10 шт."""
     return Product("Товар A", "Описание A", 100, 10)
 
+
 @pytest.fixture
 def product_b():
     """Фикстура для товара B: цена 200 руб., количество 2 шт."""
     return Product("Товар B", "Описание B", 200, 2)
 
+
 @pytest.fixture
 def product_c():
     """Фикстура для товара C: цена 50 руб., количество 5 шт."""
     return Product("Товар C", "Описание C", 50, 5)
+
 
 @pytest.fixture
 def products_list(product_a, product_b, product_c):

@@ -33,5 +33,3 @@ def test_add_two_products(product_a, product_b):
     result = product_a + product_b
     expected = 100 * 10 + 200 * 2  # 1000 + 400 = 1400
     assert result == expected
-
-
