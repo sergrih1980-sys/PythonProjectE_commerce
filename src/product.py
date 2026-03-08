@@ -11,12 +11,24 @@ class Product:
             name: str,
             description: str,
             price: float,
-            quantity: int
+            quantity: int,
     ):
         self.name = name
         self.description = description
         self.__price = price
         self.quantity = quantity
+
+    def __str__(self):
+        return f"{self.name}, {self.price} руб. Остаток: {self.quantity} шт."
+
+    def get_total_value(self) -> float:
+        """Возвращает стоимость всех единиц
+        товара на складе (цена × количество)."""
+        return self.price * self.quantity
+
+    def __add__(self, other) -> float:
+        """ Возвращает общую стоимость всех товаров на складе. """
+        return self.price * self.quantity + other.price * other.quantity
 
     @property
     def price(self):
