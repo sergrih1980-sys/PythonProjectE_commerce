@@ -22,7 +22,8 @@ class Product:
         return f"{self.name}, {self.price} руб. Остаток: {self.quantity} шт."
 
     def get_total_value(self) -> float:
-        """Возвращает стоимость всех единиц товара на складе (цена × количество)."""
+        """Возвращает стоимость всех единиц
+        товара на складе (цена × количество)."""
         return self.price * self.quantity
 
     def __add__(self, other) -> float:
