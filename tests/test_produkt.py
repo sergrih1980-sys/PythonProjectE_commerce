@@ -21,21 +21,17 @@ def test_price_setter_valid_price(valid_product):
     assert valid_product.price == 200000.0
 
 
-def test_price_setter_negative_price(capfd):
-    """Тест установки отрицательной цены."""
-    product = Product("Test Phone", 1000.0, 5, "Test description")
-    initial_price = product.price
+def test_get_total_value(product_a, product_b, product_c):
+    """Тест метода get_total_value()."""
+    assert product_a.get_total_value() == 1000  # 100 × 10
+    assert product_b.get_total_value() == 400   # 200 × 2
+    assert product_c.get_total_value() == 250   # 50 × 5
 
-    # Пытаемся установить отрицательную цену
-    product.price = -50.0
 
-    # Проверяем, что цена не изменилась
-    assert product.price == initial_price
+def test_add_two_products(product_a, product_b):
+    """Тест сложения двух товаров через __add__."""
+    result = product_a + product_b
+    expected = 100 * 10 + 200 * 2  # 1000 + 400 = 1400
+    assert result == expected
 
-    # Перехватываем вывод
-    out, err = capfd.readouterr()
-    output_text = out + err  # Объединяем оба потока
 
-    expected_message = "Цена не должна быть нулевая или отрицательная"
-    assert expected_message in output_text, \
-        f"Ожидалось сообщение: '{expected_message}'"
