@@ -4,6 +4,7 @@ class Category:
     name: str
     description: str
     products: list
+    total_quantity: int
     category_count = 0
     product_count = 0
 
@@ -11,9 +12,14 @@ class Category:
         self.name = name
         self.description = description
         self.__products = products if products else []
+
         Category.category_count += 1
         # Увеличиваем глобальный счётчик на количество переданных продуктов
         Category.product_count += len(self.__products)
+
+    def __str__(self):
+        total_quantity = sum(product.quantity for product in self.__products)
+        return f"{self.name}, количество продуктов {total_quantity} шт"
 
     def get_product_count(self):
         """Возвращает количество продуктов в категории"""
