@@ -1,5 +1,5 @@
-from src.utils import Category
 from src.product import Product
+from src.utils import Category
 
 if __name__ == "__main__":
 
@@ -128,3 +128,13 @@ if __name__ == "__main__":
 
     total_sum = product1.get_total_value() + product2.get_total_value() + product3.get_total_value()
     print(f"Общая сумма всех товаров: {total_sum} руб.")
+
+    category1 = Category(
+        "Смартфоны",
+        "Смартфоны для коммуникации и дополнительных функций",
+        [product1, product2]
+    )
+
+    # проверка __str__ категории
+    print(category1)  # Ожидаемый вывод: «Смартфоны, количество продуктов 13 шт» (5 + 8)
+    print()
