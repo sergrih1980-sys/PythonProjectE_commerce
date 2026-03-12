@@ -28,10 +28,10 @@ class Product:
         return self.price * self.quantity
 
     def __add__(self, other) -> float:
-        if type(other) is Product:
-            """ Возвращает общую стоимость всех товаров на складе. """
+        """Возвращает общую стоимость всех товаров на складе."""
+        if isinstance(other, Product):
             return self.price * self.quantity + other.price * other.quantity
-        raise TypeError
+        raise TypeError("Нельзя складывать с объектом, не являющимся продуктом")
 
     @property
     def price(self):

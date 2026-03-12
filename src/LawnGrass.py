@@ -7,4 +7,10 @@ class LawnGrass(Product):
         self.germination_period = germination_period
         self.color = color
 
+    def __add__(self, other) -> float:
+        """Возвращает общую стоимость газонной травы на складе. Складывать можно только траву."""
+        if isinstance(other, LawnGrass):
+            return self.price * self.quantity + other.price * other.quantity
+        raise TypeError("Нельзя складывать газонную траву с другим типом товара")
+
 
