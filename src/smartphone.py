@@ -8,4 +8,10 @@ class Smartphone(Product):
        self.memory = memory
        self.color = color
 
+   def __add__(self, other) -> float:
+       if type(other) is Smartphone:
+           """ Возвращает общую стоимость всех товаров на складе. """
+           return self.price * self.quantity + other.price * other.quantity
+       raise TypeError
+
 
