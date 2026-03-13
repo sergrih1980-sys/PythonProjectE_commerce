@@ -7,7 +7,7 @@ def test_produkt_LawnGrass_init(produkt_LawnGrass1):
     assert produkt_LawnGrass1.price == 500.0
     assert produkt_LawnGrass1.quantity == 20
     assert produkt_LawnGrass1.country == "Россия"
-    assert produkt_LawnGrass1.germination_period == "7 дней"
+    assert produkt_LawnGrass1.germination_days == "7 дней"
     assert produkt_LawnGrass1. color == "Зеленый"
 
 

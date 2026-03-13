@@ -170,7 +170,7 @@ def produkt_LawnGrass1():
         price=500.0,
         quantity=20,
         country="Россия",
-        germination_period="7 дней",
+        germination_days="7 дней",
         color="Зеленый"
     )
 
@@ -184,6 +184,6 @@ def produkt_LawnGrass2():
         price=450.0,
         quantity=15,
         country="США",
-        germination_period="5 дней",
+        germination_days="5 дней",
         color="Темно-Зеленый"
     )
