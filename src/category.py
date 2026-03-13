@@ -4,7 +4,6 @@ from typing import List
 class Category:
     name: str
     description: str
-    products: List[Product]
     total_quantity: int
     category_count = 0
     product_count = 0
@@ -35,11 +34,10 @@ class Category:
         """
         if not isinstance(product, Product):
             raise TypeError("Можно добавлять только объекты класса Product или его наследников")
-
         self.__products.append(product)
         Category.product_count += 1
 
     @property
     def products(self) -> List[Product]:
-        """Возвращает список продуктов в категории (не форматированный)"""
+        """Возвращает список продуктов в категории"""
         return self.__products

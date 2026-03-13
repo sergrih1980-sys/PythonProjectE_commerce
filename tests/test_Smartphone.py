@@ -20,5 +20,6 @@ def test_smartphone_add_product(product_smartphone, product_smartphone2):
 
 def test_smartphone_add_error_product(product_smartphone,
                                       product_smartphone2):
-    with pytest.raises(TypeError, match="Нельзя складывать с объектом, не являющимся продуктом"):
+    with pytest.raises(TypeError, match="Нельзя складывать с объектом, "
+                                        "не являющимся продуктом"):
         product_smartphone + 1
