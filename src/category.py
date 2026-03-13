@@ -9,7 +9,8 @@ class Category:
     category_count = 0
     product_count = 0
 
-    def __init__(self, name: str, description: str, products: List[Product] = None):
+    def __init__(self, name: str, description: str,
+                 products: List[Product] = None):
         self.name = name
         self.description = description
         self.__products: List[Product] = products if products else []
@@ -28,7 +29,8 @@ class Category:
 
     def add_product(self, product: Product) -> None:
         """
-        Добавляет продукт в список товаров и увеличивает счётчик продуктов на 1.
+        Добавляет продукт в список товаров
+         и увеличивает счётчик продуктов на 1.
 
         Параметры:
         product — продукт, который нужно добавить в категорию
