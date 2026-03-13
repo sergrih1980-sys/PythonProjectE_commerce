@@ -36,7 +36,8 @@ class Category:
         product — продукт, который нужно добавить в категорию
         """
         if not isinstance(product, Product):
-            raise TypeError("Можно добавлять только объекты класса Product или его наследников")
+            raise TypeError("Можно добавлять только объекты класса"
+                            " Product или его наследников")
         self.__products.append(product)
         Category.product_count += 1
 
