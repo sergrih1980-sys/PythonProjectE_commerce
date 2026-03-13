@@ -1,5 +1,5 @@
 
-from src.utils import Category
+from src.category import Category
 
 
 def test_category_init(sample_category):
