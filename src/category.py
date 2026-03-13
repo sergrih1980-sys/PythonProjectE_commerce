@@ -19,7 +19,8 @@ class Category:
         Category.product_count += len(self.__products)
 
         def __str__(self):
-            total_quantity = sum(product.quantity for product in self.__products)
+            total_quantity = sum(
+                product.quantity for product in self.__products)
             return f"{self.name}, количество продуктов {total_quantity} шт"
 
         def get_product_count(self):
@@ -35,7 +36,8 @@ class Category:
             product — продукт, который нужно добавить в категорию
             """
             if not isinstance(product, Product):
-                raise TypeError("Можно добавлять только объекты класса Product  или его наследников")
+                raise TypeError("Можно добавлять только объекты класса Product  "
+                                "или его наследников")
 
             self.__products.append(product)
             Category.product_count += 1

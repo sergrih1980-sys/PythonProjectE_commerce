@@ -30,7 +30,8 @@ class Product:
         """Возвращает общую стоимость всех товаров на складе."""
         if isinstance(other, Product):
             return self.price * self.quantity + other.price * other.quantity
-        raise TypeError("Нельзя складывать с объектом, не являющимся продуктом")
+        raise TypeError("Нельзя складывать с объектом, "
+                        "не являющимся продуктом")
 
     @property
     def price(self):
