@@ -1,0 +1,102 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from src.utils import Category\r\nfrom src.product import Product\r\n\r\nif __name__ == \"__main__\":\r\n\r\n    product1 = Product(\r\n        \"Samsung Galaxy S23 Ultra\",\r\n        \"256GB, Серый цвет, 200MP камера\",\r\n        18000.0,\r\n        5\r\n    )\r\n    product2 = Product(\r\n        \"iPhone 15\",\r\n        \"512GB, Gray Space\",\r\n        21000.0,\r\n        8\r\n    )\r\n    product3 = Product(\r\n        \"Xiaomi Redmi Note 11\",\r\n        \"1024GB, Синий\",\r\n        15000.0,\r\n        14\r\n    )\r\n\r\n    # Выводим информацию о продуктах\r\n    print(product1.name)\r\n    print(product1.description)\r\n    print(product1.price)\r\n    print(product1.quantity)\r\n    print()\r\n\r\n    # Создаём категорию с продуктами\r\n    category1 = Category(\r\n        \"Смартфоны\",\r\n        \"Смартфоны, как средство не только коммуникации, но и получения дополнительных функций для удобства жизни\",\r\n        [product1, product2, product3]\r\n    )\r\n\r\n    # Проверяем атрибуты категории\r\n    print(category1.name == \"Смартфоны\")\r\n    print(category1.description)\r\n    print(\"Количество продуктов в категории:\", len(category1.products))\r\n    print(\"Всего категорий:\", Category.category_count)\r\n    print(\"Всего продуктов:\", Category.product_count)\r\n    print()\r\n\r\n    # Создаём второй продукт и категорию\r\n    product4 = Product(\r\n        \"55\\\" QLED 4K\",\r\n        \"Фоновая подсветка\",\r\n        123000.0,\r\n        7\r\n    )\r\n    category2 = Category(\r\n        \"Телевизоры\",\r\n        \"Современный телевизор, который позволяет наслаждаться просмотром, станет вашим другом и помощником\",\r\n        [product4]\r\n    )\r\n\r\n    # Выводим информацию о второй категории\r\n    print(category2.name)\r\n    print(category2.description)\r\n    print(\"Количество продуктов в категории:\", category2.get_product_count())\r\n    print(category2.products)\r\n    print()\r\n\r\n    #  Выводим общие счётчики\r\n    print(\"Всего категорий:\", Category.category_count)\r\n    print(\"Всего продуктов:\", Category.product_count)\r\n    print()\r\n\r\n    # Демонстрация добавления продукта\r\n    print(\"Продукты в категории 'Смартфоны' до добавления:\")\r\n    print(category1.products)\r\n\r\n    category1.add_product(product4)\r\n    print(\"\\nПродукты в категории 'Смартфоны' после добавления:\")\r\n    print(category1.products)\r\n    print(\"Общее количество продуктов:\", Category.product_count)\r\n    print()\r\n\r\n    # Тестирование фабричного метода\r\n    try:\r\n        new_product = Product.new_product({\r\n            'name': 'Samsung Galaxy S24',\r\n            'price': 190000.0,\r\n            'quantity': 3,\r\n            'description': '512GB, Чёрный, 200MP камера'\r\n        })\r\n        print(\"Новый продукт через фабричный метод:\")\r\n        print(f\"Название: {new_product.name}\")\r\n        print(f\"Описание: {new_product.description}\")\r\n        print(f\"Цена: {new_product.price}\")\r\n        print(f\"Остаток: {new_product.quantity}\")\r\n    except ValueError as e:\r\n        print(f\"Ошибка при создании продукта: {e}\")\r\n    print()\r\n\r\n    # Вывод информации о категориях с использованием __str__\r\n    print(\"Информация о категории 'Смартфоны':\")\r\n    print(category1)\r\n    print(\"\\nИнформация о категории 'Телевизоры':\")\r\n    print(category2)
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	(revision 2e98b70d9e1eeca33b37e9edb615a55f8d79fb9f)
++++ b/main.py	(date 1773336312478)
+@@ -1,5 +1,5 @@
+-from src.utils import Category
+ from src.product import Product
++from src.category import Category
+ 
+ if __name__ == "__main__":
+ 
+@@ -100,4 +100,41 @@
+     print("Информация о категории 'Смартфоны':")
+     print(category1)
+     print("\nИнформация о категории 'Телевизоры':")
+-    print(category2)
+\ No newline at end of file
++    print(category2)
++
++    # Создаём товары
++    product1 = Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5)
++    product2 = Product("Iphone 15", "512GB, Gray space", 210000.0, 8)
++    product3 = Product("Xiaomi Redmi Note 11", "1024GB, Синий", 31000.0, 14)
++
++    print(str(product1))
++    print(str(product2))
++    print(str(product3))
++
++    category1 = Category(
++        "Смартфоны",
++        "Смартфоны, как средство не только коммуникации, но и получения дополнительных функций для удобства жизни",
++        [product1, product2, product3]
++    )
++
++    print(str(category1))
++
++    print(category1.products)
++
++    # Складываем товары
++    print(product1 + product2)
++    print(product1 + product3)
++    print(product2 + product3)
++
++    total_sum = product1.get_total_value() + product2.get_total_value() + product3.get_total_value()
++    print(f"Общая сумма всех товаров: {total_sum} руб.")
++
++    category1 = Category(
++        "Смартфоны",
++        "Смартфоны для коммуникации и дополнительных функций",
++        [product1, product2]
++    )
++
++    # проверка __str__ категории
++    print(category1)  # Ожидаемый вывод: «Смартфоны, количество продуктов 13 шт» (5 + 8)
++    print()
+Index: src/lawnGrass.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/lawnGrass.py b/src/lawnGrass.py
+new file mode 100644
+--- /dev/null	(date 1773337940640)
++++ b/src/lawnGrass.py	(date 1773337940640)
+@@ -0,0 +1,10 @@
++from src.product import Product
++
++class LawnGrass(Product):
++    def __init__(self,  name, description, price, quantity, country, germination_period, color):
++        super().__init__(name, description, price, quantity)
++        self.country = country
++        self.germination_period = germination_period
++        self.color = color
++
++
+Index: src/smartphone.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/smartphone.py b/src/smartphone.py
+new file mode 100644
+--- /dev/null	(date 1773337690515)
++++ b/src/smartphone.py	(date 1773337690515)
+@@ -0,0 +1,11 @@
++from src.product import Product
++
++class Smartphone(Product):
++   def __init__(self, name, description, price, quantity, efficiency, model, memory, color):
++       super().__init__(name, description, price, quantity)
++       self.efficiency = efficiency
++       self.model = model
++       self.memory = memory
++       self.color = color
++
++
