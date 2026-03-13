@@ -1,21 +1,22 @@
 from src.product import Product
 
+
 class Category:
-        name: str
-        description: str
-        products: list
-        total_quantity: int
-        category_count = 0
-        product_count = 0
+    name: str
+    description: str
+    products: list
+    total_quantity: int
+    category_count = 0
+    product_count = 0
 
-        def __init__(self, name, description, products=None):
-            self.name = name
-            self.description = description
-            self.__products = products if products else []
+    def __init__(self, name, description, products=None):
+        self.name = name
+        self.description = description
+        self.__products = products if products else []
 
-            Category.category_count += 1
-            # Увеличиваем глобальный счётчик на количество переданных продуктов
-            Category.product_count += len(self.__products)
+        Category.category_count += 1
+        # Увеличиваем глобальный счётчик на количество переданных продуктов
+        Category.product_count += len(self.__products)
 
         def __str__(self):
             total_quantity = sum(product.quantity for product in self.__products)
@@ -44,5 +45,5 @@ class Category:
             result = []
             for product in self.__products:
                 result.append(f"{product.name}, {product.price} руб. \
-                Остаток: {product.quantity} шт.")
+                   Остаток: {product.quantity} шт.")
             return result  # Возвращаем список

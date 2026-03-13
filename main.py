@@ -236,7 +236,7 @@ if __name__ == "__main__":
     print(f"Цена: {grass1.price} руб.")
     print(f"Количество: {grass1.quantity} шт.")
     print(f"Страна-производитель: {grass1.country}")
-    print(f"Срок прорастания: {grass1.germination_period}")
+    print(f"Срок прорастания: {grass1.germination_days}")
     print(f"Цвет: {grass1.color}")
     print()
 
@@ -245,7 +245,7 @@ if __name__ == "__main__":
     print(f"Цена: {grass2.price} руб.")
     print(f"Количество: {grass2.quantity} шт.")
     print(f"Страна-производитель: {grass2.country}")
-    print(f"Срок прорастания: {grass2.germination_period}")
+    print(f"Срок прорастания: {grass2.germination_days}")
     print(f"Цвет: {grass2.color}")
     print()
 

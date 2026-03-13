@@ -1,16 +1,32 @@
 from src.product import Product
 
+
 class LawnGrass(Product):
-    def __init__(self,  name, description, price, quantity, country, germination_period, color):
+    """Класс газонной травы с дополнительными атрибутами."""
+
+    def __init__(
+        self,
+        name: str,
+        description: str,
+        price: float,
+        quantity: int,
+        country: str,
+        germination_days: int,
+        color: str
+    ):
+        """
+        Инициализация газонной травы.
+
+        Args:
+            name: название товара
+            description: описание
+            price: цена за единицу
+            quantity: количество на складе
+            country: страна производства
+            germination_days: дни прорастания
+            color: цвет травы
+        """
         super().__init__(name, description, price, quantity)
         self.country = country
-        self.germination_period = germination_period
+        self.germination_days = germination_days
         self.color = color
-
-    def __add__(self, other) -> float:
-        """Возвращает общую стоимость газонной травы на складе. Складывать можно только траву."""
-        if isinstance(other, LawnGrass):
-            return self.price * self.quantity + other.price * other.quantity
-        raise TypeError("Нельзя складывать газонную траву с другим типом товара")
-
-
