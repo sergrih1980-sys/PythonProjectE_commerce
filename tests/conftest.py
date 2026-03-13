@@ -15,6 +15,7 @@ def products():
         quantity=5,  # исправлено: int вместо str
     )
 
+
 @pytest.fixture
 def sample_product():
     """Фикстура для образца продукта"""
@@ -24,6 +25,7 @@ def sample_product():
         quantity=7,
         description="Фоновая подсветка"
     )
+
 
 @pytest.fixture
 def sample_category():
@@ -45,6 +47,7 @@ def sample_category():
         description="Современные телевизоры с высоким разрешением",
         products=[product1, product2]
     )
+
 
 @pytest.fixture
 def multiple_categories():
@@ -75,6 +78,7 @@ def multiple_categories():
     )
     return [cat1, cat2]
 
+
 @pytest.fixture
 def valid_product():
     """Фикстура для валидного продукта"""
@@ -84,6 +88,7 @@ def valid_product():
         quantity=10,
         description="Test description"
     )
+
 
 @pytest.fixture
 def product_with_negative_price():
@@ -95,6 +100,7 @@ def product_with_negative_price():
         description="Negative price"
     )
 
+
 @pytest.fixture
 def empty_category():
     """Фикстура для пустой категории"""
@@ -103,6 +109,7 @@ def empty_category():
         description="No products",
         products=[]
     )
+
 
 @pytest.fixture
 def category_with_products(valid_product):
@@ -122,6 +129,7 @@ def category_with_products(valid_product):
         products=products
     )
 
+
 @pytest.fixture
 def product_smartphone():
     """Фикстура для смартфона"""
@@ -135,6 +143,7 @@ def product_smartphone():
         memory=1024,
         color="Синий"
     )
+
 
 @pytest.fixture
 def product_smartphone2():
@@ -150,6 +159,7 @@ def product_smartphone2():
         color="Gray space"
     )
 
+
 @pytest.fixture
 def produkt_LawnGrass1():
     """ Фикстура для газонной травы """
@@ -162,6 +172,7 @@ def produkt_LawnGrass1():
         germination_period="7 дней",
         color="Зеленый"
     )
+
 
 @pytest.fixture
 def produkt_LawnGrass2():
