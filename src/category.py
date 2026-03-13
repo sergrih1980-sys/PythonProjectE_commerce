@@ -1,6 +1,7 @@
 from src.product import Product
 from typing import List
 
+
 class Category:
     name: str
     description: str
