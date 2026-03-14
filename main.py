@@ -116,6 +116,7 @@ smartphone1 = Smartphone(
     256,
     "Серый"
 )
+
 smartphone2 = Smartphone(
     "Iphone 15",
     "512GB, Gray space",
