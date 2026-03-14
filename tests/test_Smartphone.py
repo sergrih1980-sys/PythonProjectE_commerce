@@ -12,9 +12,9 @@ def test_smartphone_init(product_smartphone1):
     assert product_smartphone1.color == "Синий"
 
 
-def test_smartphone_add_product(product_smartphone, product_smartphone2):
+def test_smartphone_add_product(product_smartphone1, product_smartphone2):
     """Тест сложения двух экземпляров Smartphone."""
-    result = product_smartphone + product_smartphone2
+    result = product_smartphone1 + product_smartphone2
     assert result == 180000.0 * 5 + 210000.0 * 8
 
 
