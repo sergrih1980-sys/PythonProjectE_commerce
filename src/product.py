@@ -8,7 +8,8 @@ class Product(PrintMixin, BaseProduct):
     _price: float
     quantity: int
 
-    def __init__(self, name: str, description: str, price: float, quantity: int):
+    def __init__(self, name: str, description: str,
+                 price: float, quantity: int):
         # Инициализируем атрибуты
         self.name = name
         self.description = description
@@ -20,13 +21,15 @@ class Product(PrintMixin, BaseProduct):
         return f"{self.name}, {self.price} руб. Остаток: {self.quantity} шт."
 
     def get_total_value(self) -> float:
-        """Возвращает стоимость всех единиц товара на складе (цена × количество)."""
+        """Возвращает стоимость всех единиц
+        товара на складе (цена × количество)."""
         return self.price * self.quantity
 
     def __add__(self, other) -> float:
         """
         Возвращает общую стоимость двух товаров на складе.
-        Складывать можно только объекты класса Product или его наследников.
+        Складывать можно только объекты класса Product или
+         его наследников.
         """
         if not isinstance(other, Product):
             raise TypeError("Нельзя складывать с объектом, не являющимся продуктом")
