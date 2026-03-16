@@ -1,3 +1,5 @@
+
+
 import pytest
 
 from src.product import Product
@@ -23,7 +25,6 @@ def sample_product():
         price=123000.0,
         quantity=7,
         description="Фоновая подсветка"
-
     )
 
 
@@ -50,7 +51,6 @@ def multiple_categories():
         "Смартфоны",
         "Категория 2",
         [Product("Phone1", 70000.0, 5, "Desc2")]
-
     )
     return [cat1, cat2]
 
@@ -82,33 +82,36 @@ def category_with_products(valid_product):
 
 @pytest.fixture
 def product_smartphone1():
-    return Smartphone("Xiaomi Redmi Note 11",
-    "1024GB, Синий",
-    31000.0,
-    14,
-    90.3,
-    "Note 11",
-    1024,
-    "Синий"
-)
+    return Smartphone(
+        "Xiaomi Redmi Note 11",
+        "1024GB, Синий",
+        31000.0,
+        14,
+        90.3,
+        "Note 11",
+        1024,
+        "Синий"
+    )
 
 
 @pytest.fixture
 def product_smartphone2():
-    return Smartphone("Iphone 15",
-    "512GB, Gray space",
-    210000.0,
-    8,
-    98.2,
-    "15",
-    512,
-    "Gray space"
-)
+    return Smartphone(
+        "Iphone 15",
+        "512GB, Gray space",
+        210000.0,
+        8,
+        98.2,
+        "15",
+        512,
+        "Gray space"
+    )
 
 
 @pytest.fixture
-def produkt_LawnGrass1():
-    return LawnGrass("Газонная трава",
+def product_lawn_grass1():
+    return LawnGrass(
+        "Газонная трава",
         "Элитная трава для газона",
         500.0,
         20,
@@ -119,8 +122,9 @@ def produkt_LawnGrass1():
 
 
 @pytest.fixture
-def produkt_LawnGrass2():
-    return LawnGrass("Газонная трава 2",
+def product_lawn_grass2():
+    return LawnGrass(
+        "Газонная трава 2",
         "Выносливая трава",
         450.0,
         15,
