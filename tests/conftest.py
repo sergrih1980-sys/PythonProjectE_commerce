@@ -10,9 +10,9 @@ from src.LawnGrass import LawnGrass
 def products():
     return Product(
         name="Samsung Galaxy S23 Ultra",
-        price="180000.0",
+        price=180000.0,
         description="256GB, Серый цвет, 200MP камера",
-        quantity="5",
+        quantity=5
     )
 
 
@@ -58,7 +58,7 @@ def multiple_categories():
 @pytest.fixture
 def valid_product():
     """Фикстура для валидного продукта"""
-    return Product("Test Product", 100.0, 10, "Test description")
+    return Product("Test Product", "Test description", 100, 10)
 
 
 @pytest.fixture
