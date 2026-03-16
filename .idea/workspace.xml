@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c588647-88d8-4fb5-9522-93314a7a70d3" name="Changes" comment="Исправление ошибок">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/product.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/product.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseProduct.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseProduct.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,22 +271,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1772912567677</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Исправление ошибок">
-      <option name="closed" value="true" />
-      <created>1773063498514</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1773063498514</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Исправление ошибок">
-      <option name="closed" value="true" />
-      <created>1773065350963</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1773065350963</updated>
     </task>
     <task id="LOCAL-00008" summary="Исправление ошибок">
       <option name="closed" value="true" />
@@ -665,7 +648,23 @@
       <option name="project" value="LOCAL" />
       <updated>1773673523494</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Исправление ошибок">
+      <option name="closed" value="true" />
+      <created>1773674490750</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1773674490750</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Исправление ошибок">
+      <option name="closed" value="true" />
+      <created>1773674723594</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1773674723594</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
