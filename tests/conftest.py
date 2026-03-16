@@ -92,6 +92,7 @@ def product_smartphone1():
     "Синий"
 )
 
+
 @pytest.fixture
 def product_smartphone2():
     return Smartphone("Iphone 15",
@@ -104,6 +105,7 @@ def product_smartphone2():
     "Gray space"
 )
 
+
 @pytest.fixture
 def produkt_LawnGrass1():
     return LawnGrass("Газонная трава",
@@ -114,6 +116,7 @@ def produkt_LawnGrass1():
         7,
         "Зеленый"
     )
+
 
 @pytest.fixture
 def produkt_LawnGrass2():
