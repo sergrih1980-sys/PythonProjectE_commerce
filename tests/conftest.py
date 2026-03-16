@@ -109,7 +109,7 @@ def product_smartphone2():
 
 
 @pytest.fixture
-def product_lawn_grass1():
+def produkt_LawnGrass():
     return LawnGrass(
         "Газонная трава",
         "Элитная трава для газона",
@@ -122,7 +122,7 @@ def product_lawn_grass1():
 
 
 @pytest.fixture
-def product_lawn_grass2():
+def produkt_LawnGrass2():
     return LawnGrass(
         "Газонная трава 2",
         "Выносливая трава",
