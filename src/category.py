@@ -1,5 +1,7 @@
 from typing import List
+
 from src.product import Product
+
 
 class Category:
     name: str
@@ -8,7 +10,8 @@ class Category:
     category_count = 0
     product_count = 0
 
-    def __init__(self, name: str, description: str, products: List[Product] = None):
+    def __init__(self, name: str, description: str,
+                 products: List[Product] = None):
         self.name = name
         self.description = description
         self.__products: List[Product] = products if products else []
@@ -16,7 +19,8 @@ class Category:
         # Увеличиваем счётчик категорий при создании объекта
         Category.category_count += 1
 
-        # Увеличиваем общий счётчик продуктов на количество переданных в конструкторе
+        # Увеличиваем общий счётчик продуктов
+        # на количество переданных в конструкторе
         Category.product_count += len(self.__products)
 
     def __str__(self) -> str:
@@ -28,9 +32,11 @@ class Category:
         return len(self.__products)
 
     def add_product(self, product: Product) -> None:
-        """Добавляет продукт в список товаров и увеличивает счётчик продуктов на 1."""
+        """Добавляет продукт в список товаров и
+        увеличивает счётчик продуктов на 1."""
         if not isinstance(product, Product):
-            raise TypeError("Можно добавлять только объекты класса Product или его наследников")
+            raise TypeError("Можно добавлять только объекты "
+                            "класса Product или его наследников")
 
         self.__products.append(product)
         # Увеличиваем глобальный счётчик продуктов
