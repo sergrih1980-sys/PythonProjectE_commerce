@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c588647-88d8-4fb5-9522-93314a7a70d3" name="Changes" comment="Исправление ошибок">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_print_mixin.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_print_mixin.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +74,7 @@
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.print_mixin">
     <configuration name="LawnGrass" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonProjectE_commerce" />
       <option name="ENV_FILES" value="" />
@@ -249,8 +250,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.print_mixin" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python tests.pytest for tests.test_Smartphone.test_smartphone_add_error_product" />
         <item itemvalue="Python.LawnGrass" />
         <item itemvalue="Python.Smartphone" />
@@ -271,22 +272,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1772912567677</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Исправление ошибок">
-      <option name="closed" value="true" />
-      <created>1773342849143</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1773342849143</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Исправление ошибок">
-      <option name="closed" value="true" />
-      <created>1773430053134</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1773430053134</updated>
     </task>
     <task id="LOCAL-00021" summary="Исправление ошибок">
       <option name="closed" value="true" />
@@ -664,7 +649,23 @@
       <option name="project" value="LOCAL" />
       <updated>1773679640297</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Исправление ошибок">
+      <option name="closed" value="true" />
+      <created>1773679821416</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1773679821416</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Исправление ошибок">
+      <option name="closed" value="true" />
+      <created>1773680027486</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1773680027486</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
