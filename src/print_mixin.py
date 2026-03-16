@@ -1,5 +1,5 @@
 class PrintMixin:
-    def __init__(self):
+    def __init__(self, *args, **kwargs) -> None:
         print(repr(self))
 
     def __repr__(self):
