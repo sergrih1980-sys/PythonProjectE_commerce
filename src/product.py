@@ -1,19 +1,18 @@
 from src.baseProduct import BaseProduct
 from src.print_mixin import PrintMixin
 
-class Product(BaseProduct, PrintMixin):
+
+class Product(PrintMixin, BaseProduct):
     name: str
     description: str
-    price: float
+    _price: float
     quantity: int
 
-
     def __init__(self, name: str, description: str, price: float, quantity: int):
-        self.price = price
-        self.quantity = quantity
+        # Инициализируем атрибуты
         self.name = name
         self.description = description
-        self.__price = price
+        self._price = price
         self.quantity = quantity
         super().__init__()
 
@@ -33,26 +32,23 @@ class Product(BaseProduct, PrintMixin):
             raise TypeError("Нельзя складывать с объектом, не являющимся продуктом")
         return self.price * self.quantity + other.price * other.quantity
 
-
     @property
     def price(self) -> float:
-        """Геттер для приватного атрибута __price"""
-        return self.__price
-
-
-    @classmethod
-    def new_product(cls, product_data: dict) -> 'Product':
-        """Создаёт новый экземпляр Product из словаря с данными"""
-        product = cls(**product_data)
-        return product
-
+        """Геттер для защищённого атрибута _price"""
+        return self._price
 
     @price.setter
     def price(self, value: float) -> None:
         """Сеттер для атрибута price с проверкой корректности значения."""
         if value <= 0:
             raise ValueError("Цена не должна быть нулевая или отрицательная")
-        self.__price = float(value)
+        self._price = float(value)
+
+    @classmethod
+    def new_product(cls, product_data: dict) -> 'Product':
+        """Создаёт новый экземпляр Product из словаря с данными"""
+        product = cls(**product_data)
+        return product
 
     @classmethod
     def new_base_product(cls, data: dict) -> 'Product':
