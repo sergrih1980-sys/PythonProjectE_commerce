@@ -32,7 +32,8 @@ class Product(PrintMixin, BaseProduct):
          его наследников.
         """
         if not isinstance(other, Product):
-            raise TypeError("Нельзя складывать с объектом, не являющимся продуктом")
+            raise TypeError("Нельзя складывать с объектом, "
+                            "не являющимся продуктом")
         return self.price * self.quantity + other.price * other.quantity
 
     @property

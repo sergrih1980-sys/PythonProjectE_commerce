@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c588647-88d8-4fb5-9522-93314a7a70d3" name="Changes" comment="Исправление ошибок">
-      <change beforePath="$PROJECT_DIR$/src/baseProduct.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseProduct.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/product.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/product.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,30 +271,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1772912567677</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Исправление ошибок">
-      <option name="closed" value="true" />
-      <created>1773065615945</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1773065615945</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Исправление ошибок">
-      <option name="closed" value="true" />
-      <created>1773065659942</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1773065659942</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Исправление ошибок">
-      <option name="closed" value="true" />
-      <created>1773070230945</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1773070230945</updated>
     </task>
     <task id="LOCAL-00011" summary="Исправление ошибок">
       <option name="closed" value="true" />
@@ -664,7 +640,31 @@
       <option name="project" value="LOCAL" />
       <updated>1773674723594</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Исправление ошибок">
+      <option name="closed" value="true" />
+      <created>1773674812415</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1773674812415</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Исправление ошибок">
+      <option name="closed" value="true" />
+      <created>1773674957172</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1773674957172</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Исправление ошибок">
+      <option name="closed" value="true" />
+      <created>1773675065973</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1773675065974</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
