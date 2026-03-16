@@ -1,11 +1,10 @@
-from src.category import Category
 from src.product import Product
+from src.category import Category
 from src.Smartphone import Smartphone
 from src.LawnGrass import LawnGrass
 
-
 if __name__ == "__main__":
-
+    # Создаём базовые продукты
     product1 = Product(
         "Samsung Galaxy S23 Ultra",
         "256GB, Серый цвет, 200MP камера",
@@ -49,7 +48,7 @@ if __name__ == "__main__":
 
     # Создаём второй продукт и категорию
     product4 = Product(
-        "55\" QLED 4K",
+        '55" QLED 4K',  # Используем одинарные кавычки для экранирования
         "Фоновая подсветка",
         123000.0,
         7
@@ -67,7 +66,7 @@ if __name__ == "__main__":
     print(category2.products)
     print()
 
-    #  Выводим общие счётчики
+    # Выводим общие счётчики
     print("Всего категорий:", Category.category_count)
     print("Всего продуктов:", Category.product_count)
     print()
@@ -106,123 +105,99 @@ if __name__ == "__main__":
     print(category2)
 
     # Создаём смартфоны
-smartphone1 = Smartphone(
-    "Samsung Galaxy S23 Ultra",
-    "256GB, Серый цвет, 200MP камера",
-    180000.0,
-    5,
-    95.5,
-    "S23 Ultra",
-    256,
-    "Серый"
-)
-
-smartphone2 = Smartphone(
-    "Iphone 15",
-    "512GB, Gray space",
-    210000.0,
-    8,
-    98.2,
-    "15",
-    512,
-    "Gray space"
-)
-smartphone3 = Smartphone(
-    "Xiaomi Redmi Note 11",
-    "1024GB, Синий",
-    31000.0,
-    14,
-    90.3,
-    "Note 11",
-    1024,
-    "Синий"
-)
-
-# Оптимизированный вывод информации о смартфонах
-smartphones = [smartphone1, smartphone2, smartphone3]
-for i, smartphone in enumerate(smartphones, 1):
-    print(f"--- Смартфон {i} ---")
-    print(f"Название: {smartphone.name}")
-    print(f"Описание: {smartphone.description}")
-    print(f"Цена: {smartphone.price} руб.")
-    print(f"Количество: {smartphone.quantity} шт.")
-    print(f"Эффективность: {smartphone.efficiency}%")
-    print(f"Модель: {smartphone.model}")
-    print(f"Память: {smartphone.memory} ГБ")
-    print(f"Цвет: {smartphone.color}")
-    print()
-
-# Создаём газонную траву с корректными значениями germination_days (int)
-try:
-    grass1 = LawnGrass(
-        "Газонная трава",
-        "Элитная трава для газона",
-        500.0,
-        20,
-        "Россия",
-        7,
-        "Зеленый"
-    )
-    grass2 = LawnGrass(
-        "Газонная трава 2",
-        "Выносливая трава",
-        450.0,
-        15,
-        "США",
+    smartphone1 = Smartphone(
+        "Samsung Galaxy S23 Ultra",
+        "256GB, Серый цвет, 200MP камера",
+        180000.0,
         5,
-        "Темно-зеленый"
+        95.5,
+        "S23 Ultra",
+        256,
+        "Серый"
     )
-except Exception as e:
-    print(f"Ошибка при создании газонной травы: {e}")
-    raise
+    smartphone2 = Smartphone(
+        "iPhone 15",
+        "512GB, Gray space",
+        210000.0,
+        8,
+        98.2,
+        "15",
+        512,
+        "Gray space"
+    )
+    smartphone3 = Smartphone(
+        "Xiaomi Redmi Note 11",
+        "1024GB, Синий",
+        31000.0,
+        14,
+        90.3,
+        "Note 11",
+        1024,
+        "Синий"
+    )
 
-# Вывод информации о газонной траве
-grasses = [grass1, grass2]
-for i, grass in enumerate(grasses, 1):
-    print(f"--- Газонная трава {i} ---")
-    print(f"Название: {grass.name}")
-    print(f"Описание: {grass.description}")
-    print(f"Цена: {grass.price} руб.")
-    print(f"Количество: {grass.quantity} шт.")
-    print(f"Страна производства: {grass.country}")
-    print(f"Дни прорастания: {grass.germination_days}")  # исправлено: было germination_period
-    print(f"Цвет: {grass.color}")
-    print()
+    # Оптимизированный вывод информации о смартфонах
+    smartphones = [smartphone1, smartphone2, smartphone3]
+    for i, smartphone in enumerate(smartphones, 1):
+        print(f"--- Смартфон {i} ---")
+        print(f"Название: {smartphone.name}")
+        print(f"Описание: {smartphone.description}")
+        print(f"Цена: {smartphone.price} руб.")
+        print(f"Количество: {smartphone.quantity} шт.")
+        print(f"Эффективность: {smartphone.efficiency}%")
+        print(f"Модель: {smartphone.model}")
+        print(f"Память: {smartphone.memory} ГБ")
+        print(f"Цвет: {smartphone.color}")
+        print()
 
-# Проверка сложения
-smartphone_sum = smartphone1 + smartphone2
-print(f"Сумма стоимости смартфонов: {smartphone_sum} руб.")
+    # Создаём газонную траву с корректными значениями germination_days (int)
+    try:
+        grass1 = LawnGrass(
+            "Газонная трава",
+            "Элитная трава для газона",
+            500.0,
+            20,
+            "Россия",
+            7,
+            "Зеленый"
+        )
+        grass2 = LawnGrass(
+            "Газонная трава 2",
+            "Выносливая трава",
+            450.0,
+            15,
+            "США",
+            5,
+            "Темно-зеленый"
+        )
+    except Exception as e:
+        print(f"Ошибка при создании газонной травы: {e}")
+        raise
 
-grass_sum = grass1 + grass2
-print(f"Сумма стоимости газонной травы: {grass_sum} руб.")
+    # Вывод информации о газонной траве
+    grasses = [grass1, grass2]
+    for i, grass in enumerate(grasses, 1):
+        print(f"--- Газонная трава {i} ---")
+        print(f"Название: {grass.name}")
+        print(f"Описание: {grass.description}")
+        print(f"Цена: {grass.price} руб.")
+        print(f"Количество: {grass.quantity} шт.")
+        print(f"Страна производства: {grass.country}")
+        print(f"Дни прорастания: {grass.germination_days}")
+        print(f"Цвет: {grass.color}")
+        print()
 
-# Проверка сложения объектов разных типов
-try:
-    invalid_sum = smartphone1 + grass1
-except TypeError as e:
-    print(f"Возникла ошибка TypeError при попытке сложения: {e}")
-else:
-    print("Не возникла ошибка TypeError при попытке сложения")
+    # Проверка сложения
+    smartphone_sum = smartphone1 + smartphone2
+    print(f"Сумма стоимости смартфонов: {smartphone_sum} руб.")
 
-# Создание категорий с наследниками Product
-category_smartphones = Category("Смартфоны", "Высокотехнологичные смартфоны", [smartphone1, smartphone2])
-category_grass = Category("Газонная трава", "Различные виды газонной травы", [grass1, grass2])
+    grass_sum = grass1 + grass2
+    print(f"Сумма стоимости газонной травы: {grass_sum} руб.")
 
-# Добавление продукта в категорию
-category_smartphones.add_product(smartphone3)
-
-# Вывод продуктов в категории смартфонов
-print("Продукты в категории 'Смартфоны':")
-for product in category_smartphones.products:
-    print(f"- {product.name}, {product.price} руб., {product.quantity} шт.")
-print()
-
-print(f"Общее количество продуктов во всех категориях: {Category.product_count}")
-
-# Попытка добавить некорректный объект
-try:
-    category_smartphones.add_product("Not a product")
-except TypeError as e:
-    print(f"Возникла ошибка TypeError при добавлении не продукта: {e}")
-else:
-    print("Не возникла ошибка TypeError при добавлении не продукта")
+    # Проверка сложения объектов разных типов
+    try:
+        invalid_sum = smartphone1 + grass1
+    except TypeError as e:
+        print(f"Возникла ошибка TypeError при попытке сложения: {e}")
+    else:
+        print("Не возникла ошибка TypeError при попытке сложения")

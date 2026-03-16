@@ -1,6 +1,7 @@
+from src.baseProduct import BaseProduct
+from src.print_mixin import PrintMixin
 
-
-class Product:
+class Product(BaseProduct, PrintMixin):
     name: str
     description: str
     price: float
@@ -8,10 +9,13 @@ class Product:
 
 
     def __init__(self, name: str, description: str, price: float, quantity: int):
+        self.price = price
+        self.quantity = quantity
         self.name = name
         self.description = description
         self.__price = price
         self.quantity = quantity
+        super().__init__()
 
     def __str__(self) -> str:
         return f"{self.name}, {self.price} руб. Остаток: {self.quantity} шт."
@@ -49,3 +53,8 @@ class Product:
         if value <= 0:
             raise ValueError("Цена не должна быть нулевая или отрицательная")
         self.__price = float(value)
+
+    @classmethod
+    def new_base_product(cls, data: dict) -> 'Product':
+        """Создаёт новый базовый продукт из словаря с данными."""
+        return cls(**data)
