@@ -1,16 +1,20 @@
+
+
 import pytest
 
 from src.product import Product
-from src.utils import Category
+from src.category import Category
+from src.Smartphone import Smartphone
+from src.LawnGrass import LawnGrass
 
 
 @pytest.fixture
 def products():
     return Product(
         name="Samsung Galaxy S23 Ultra",
-        price="180000.0",
+        price=180000.0,
         description="256GB, Серый цвет, 200MP камера",
-        quantity="5",
+        quantity=5
     )
 
 
@@ -21,7 +25,6 @@ def sample_product():
         price=123000.0,
         quantity=7,
         description="Фоновая подсветка"
-
     )
 
 
@@ -48,7 +51,6 @@ def multiple_categories():
         "Смартфоны",
         "Категория 2",
         [Product("Phone1", 70000.0, 5, "Desc2")]
-
     )
     return [cat1, cat2]
 
@@ -56,7 +58,7 @@ def multiple_categories():
 @pytest.fixture
 def valid_product():
     """Фикстура для валидного продукта"""
-    return Product("Test Product", 100.0, 10, "Test description")
+    return Product("Test Product", "Test description", 100, 10)
 
 
 @pytest.fixture
@@ -79,24 +81,54 @@ def category_with_products(valid_product):
 
 
 @pytest.fixture
-def product_a():
-    """Фикстура для товара A: цена 100 руб., количество 10 шт."""
-    return Product("Товар A", "Описание A", 100, 10)
+def product_smartphone1():
+    return Smartphone(
+        "Xiaomi Redmi Note 11",
+        "1024GB, Синий",
+        31000.0,
+        14,
+        90.3,
+        "Note 11",
+        1024,
+        "Синий"
+    )
 
 
 @pytest.fixture
-def product_b():
-    """Фикстура для товара B: цена 200 руб., количество 2 шт."""
-    return Product("Товар B", "Описание B", 200, 2)
+def product_smartphone2():
+    return Smartphone(
+        "Iphone 15",
+        "512GB, Gray space",
+        210000.0,
+        8,
+        98.2,
+        "15",
+        512,
+        "Gray space"
+    )
 
 
 @pytest.fixture
-def product_c():
-    """Фикстура для товара C: цена 50 руб., количество 5 шт."""
-    return Product("Товар C", "Описание C", 50, 5)
+def produkt_LawnGrass():
+    return LawnGrass(
+        "Газонная трава",
+        "Элитная трава для газона",
+        500.0,
+        20,
+        "Россия",
+        7,
+        "Зеленый"
+    )
 
 
 @pytest.fixture
-def products_list(product_a, product_b, product_c):
-    """Фикстура — список всех товаров."""
-    return [product_a, product_b, product_c]
+def produkt_LawnGrass2():
+    return LawnGrass(
+        "Газонная трава 2",
+        "Выносливая трава",
+        450.0,
+        15,
+        "США",
+        5,
+        "Темно-зеленый"
+    )
