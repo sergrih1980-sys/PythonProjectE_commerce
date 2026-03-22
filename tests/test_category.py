@@ -26,3 +26,11 @@ def test_products_property_empty_category(empty_category):
     assert isinstance(result, list), "Результат должен быть списком"
     assert len(result) == 0, \
         "В пустой категории список продуктов должен быть пустым"
+
+
+def test_average_price_empty_category():
+    # Создаём категорию без товаров
+    empty_category = Category("Электроника", "Электронные устройства")
+
+    # Средняя цена в пустой категории должна быть 0.0
+    assert empty_category.average_price() == 0.0
