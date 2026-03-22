@@ -62,5 +62,5 @@ class Category:
             average_price = total_price / len(self.__products)
             return average_price
         except ZeroDivisionError:
-            # Возникает, если len(self.__products) == 0
+            # Если len(self.__products) == 0
             return 0.0
