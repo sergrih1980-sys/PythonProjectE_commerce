@@ -46,3 +46,20 @@ class Category:
     def products(self) -> List[Product]:
         """Возвращает список продуктов в категории (исходные объекты)"""
         return self.__products
+
+    def average_price(self) -> float:
+        """
+        Возвращает среднюю цену всех товаров в категории.
+
+        Если в категории нет товаров, возвращается 0.0.
+
+        Returns:
+            float: Средняя цена товаров или 0.0, если товаров нет.
+        """
+        if not self.__products:  # Проверяем, пуст ли список товаров
+            return 0.0
+
+        total_price = sum(product.price for product in self.__products)
+        average_price = total_price / len(self.__products)
+
+        return average_price
