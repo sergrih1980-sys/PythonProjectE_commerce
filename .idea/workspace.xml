@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c588647-88d8-4fb5-9522-93314a7a70d3" name="Changes" comment="Исправление ошибок" />
+    <list default="true" id="7c588647-88d8-4fb5-9522-93314a7a70d3" name="Changes" comment="Исправление ошибок">
+      <change beforePath="$PROJECT_DIR$/src/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/category.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,7 +73,7 @@
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.product">
+  <component name="RunManager" selected="Python.main">
     <configuration name="LawnGrass" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonProjectE_commerce" />
       <option name="ENV_FILES" value="" />
@@ -247,8 +249,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.product" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.product" />
         <item itemvalue="Python.print_mixin" />
         <item itemvalue="Python tests.pytest for tests.test_Smartphone.test_smartphone_add_error_product" />
         <item itemvalue="Python.LawnGrass" />
@@ -269,14 +271,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1772912567677</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Исправление ошибок">
-      <option name="closed" value="true" />
-      <created>1773434454101</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1773434454101</updated>
     </task>
     <task id="LOCAL-00030" summary="Исправление ошибок">
       <option name="closed" value="true" />
@@ -662,7 +656,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774204851650</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="Исправление ошибок">
+      <option name="closed" value="true" />
+      <created>1774205282903</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1774205282903</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
