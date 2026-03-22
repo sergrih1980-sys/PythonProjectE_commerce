@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c588647-88d8-4fb5-9522-93314a7a70d3" name="Changes" comment="Исправление ошибок">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage.py" beforeDir="false" />
+develop
+    <list default="true" id="7c588647-88d8-4fb5-9522-93314a7a70d3" name="Changes" comment="Исправление ошибок" />
+
+   
     </list>
+ main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -273,22 +275,8 @@
       <option name="presentableId" value="Default" />
       <updated>1772912567677</updated>
     </task>
-    <task id="LOCAL-00037" summary="Исправление ошибок">
-      <option name="closed" value="true" />
-      <created>1773440878433</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1773440878433</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Исправление ошибок">
-      <option name="closed" value="true" />
-      <created>1773441995361</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1773441995361</updated>
-    </task>
+ develop
+ main
     <task id="LOCAL-00039" summary="Исправление ошибок">
       <option name="closed" value="true" />
       <created>1773442582578</created>
@@ -665,7 +653,25 @@
       <option name="project" value="LOCAL" />
       <updated>1774213540942</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+ develop
+    <task id="LOCAL-00086" summary="Исправление ошибок">
+      <option name="closed" value="true" />
+      <created>1774213969133</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1774213969133</updated>
+    </task>
+    <task id="LOCAL-00087" summary="Исправление ошибок">
+      <option name="closed" value="true" />
+      <created>1774213992532</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1774213992532</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
+main
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
