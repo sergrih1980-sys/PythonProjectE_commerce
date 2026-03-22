@@ -25,7 +25,7 @@
 ```python```
 `Product`(name: str, price: float, quantity: int, description: str)
 
-### Класс `Category`
+###  Класс `Category`
 
  Представляет категорию товаров.
 
