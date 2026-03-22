@@ -46,3 +46,23 @@ class Category:
     def products(self) -> List[Product]:
         """Возвращает список продуктов в категории (исходные объекты)"""
         return self.__products
+
+    def average_price(self) -> float:
+        """
+        Возвращает среднюю цену всех товаров в категории.
+
+        Использует обработку исключений для предотвращения
+         ошибки деления на ноль.
+        В случае возникновения ошибки (пустой список товаров)
+         возвращается 0.0.
+
+        Returns:
+            float: Средняя цена товаров или 0.0, если товаров нет.
+        """
+        try:
+            total_price = sum(product.price for product in self.__products)
+            average_price = total_price / len(self.__products)
+            return average_price
+        except ZeroDivisionError:
+            # Если len(self.__products) == 0
+            return 0.0
