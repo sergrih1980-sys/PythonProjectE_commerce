@@ -31,7 +31,7 @@ def sample_product():
 @pytest.fixture
 def sample_category():
     product1 = Product("Телевизор 4K", "4K, HDR", 50000.0, 3)
-    product2 = Product("Телевизор 8K", "8K, OLED",120000.0, 1)
+    product2 = Product("Телевизор 8K", "8K, OLED", 120000.0, 1)
 
     return Category(
         name="Телевизоры",
@@ -131,4 +131,14 @@ def produkt_LawnGrass2():
         "США",
         5,
         "Темно-зеленый"
+    )
+
+
+@pytest.fixture
+def product_without_produkt1():
+    return Product(
+        name="Samsung Galaxy S23 Ultra",
+        price=180000.0,
+        description="256GB, Серый цвет, 200MP камера",
+        quantity=0
     )
