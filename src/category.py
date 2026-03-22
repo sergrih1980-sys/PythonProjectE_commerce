@@ -51,15 +51,16 @@ class Category:
         """
         Возвращает среднюю цену всех товаров в категории.
 
-        Если в категории нет товаров, возвращается 0.0.
+        Использует обработку исключений для предотвращения ошибки деления на ноль.
+        В случае возникновения ошибки (пустой список товаров) возвращается 0.0.
 
         Returns:
             float: Средняя цена товаров или 0.0, если товаров нет.
         """
-        if not self.__products:  # Проверяем, пуст ли список товаров
+        try:
+            total_price = sum(product.price for product in self.__products)
+            average_price = total_price / len(self.__products)
+            return average_price
+        except ZeroDivisionError:
+            # Возникает, если len(self.__products) == 0
             return 0.0
-
-        total_price = sum(product.price for product in self.__products)
-        average_price = total_price / len(self.__products)
-
-        return average_price
